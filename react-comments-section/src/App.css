@@ -1,0 +1,9 @@
+.reply-comment
+{
+    display: none;
+}
+
+.reply-comment.reply-active
+{
+    display: block;
+}
