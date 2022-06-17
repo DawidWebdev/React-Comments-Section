@@ -20,7 +20,8 @@ const App = () => {
     let comment ={
       id: id,
       text: text,
-      ownComment: true
+      ownComment: true,
+      username: "Elon Musk"
     }
     let newComments = [...comments, comment];
     setComments(newComments);
@@ -32,18 +33,18 @@ const App = () => {
   }
 
   const EditComment = (commentage) =>{
-    
+
   }
 
   return (
     <main>
       <section>
         <ul>
-          <Comment commentimage={GatesImage} commenttext="Wow! This app is better than Twitter!" commentdate="1 week ago" elonImage={ElonImage} ownComment={false}/>
-          <Comment commentimage={ZuckerbergImage} commenttext="In my opinion, this application is a new facebook, change my mind!!!" commentdate="2 days ago" elonImage={ElonImage} ownComment={false}/>
+          <Comment commentimage={GatesImage} commenttext="Wow! This app is better than Twitter!" commentdate="1 week ago" elonImage={ElonImage} ownComment={false} commentusername="Bill Gates"/>
+          <Comment commentimage={ZuckerbergImage} commenttext="In my opinion, this application is a new facebook, change my mind!!!" commentdate="2 days ago" elonImage={ElonImage} ownComment={false} commentusername="Mark Zuckerberg"/>
           {comments.map((comment) =>{
             return(
-              <Comment commentage={comment} commenttext={comment.text} key={comment.id} commentimage={ElonImage} elonImage={ElonImage} ownComment={comment.ownComment} DeleteComment={DeleteComment}/>
+              <Comment commentage={comment} commenttext={comment.text} key={comment.id} commentimage={ElonImage} elonImage={ElonImage} ownComment={comment.ownComment} DeleteComment={DeleteComment} commentusername={comment.username}/>
             )
           })}
         </ul>

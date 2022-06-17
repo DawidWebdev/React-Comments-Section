@@ -15,13 +15,15 @@ export const CommentForm = ({ElonImage, AddComment}) => {
         setInput(e.target.value);
     }
   return (
-    <form className="commentform" onSubmit={null}>
-        <img src={ElonImage} alt="" className="commentform-avatar" />
-        <input type="textarea" onChange={formChange} value={input}/>
-        <button onClick={(e)=>{
-            e.preventDefault();
-            formSubmit();
-        }}>SEND</button>
-    </form>
+        <div className="comment-form-section">
+            <div className="commentform">
+                <img src={ElonImage} alt="" className="commentform-avatar" />
+                <input type="text" onChange={formChange} value={input} className="commentform-input" placeholder='Add a comment...'/>  
+                <button className='commentform-button' onClick={(e)=>{
+                    e.preventDefault();
+                    formSubmit();
+                }}>SEND</button>
+            </div>
+        </div>
   )
 }

@@ -1,6 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root{
+--Moderate-blue: hsl(238, 40%, 52%);
+--Soft-Red: hsl(358, 79%, 66%);
+--Light-grayish-blue: hsl(239, 57%, 85%);
+--Pale-red: hsl(357, 100%, 86%);
+--Dark-blue: hsl(212, 24%, 26%);
+--Grayish-Blue: hsl(211, 10%, 45%);
+--Light-gray: hsl(223, 19%, 93%);
+--Very-light-gray: hsl(228, 33%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--Light-gray);
+    font-family: 'Rubik', sans-serif;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+ul
+{
+    padding: 0;
+    margin: 0;
+}
+
+svg
+{
+    margin-right: .5rem;
+}
+
+button
+{
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-section
+{
+    margin-bottom: 1rem;
+}
+
+img
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.comment 
+{
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.comments-of-comments
+{
+    margin-top: 1rem;
+}
+
+.comment-top
+{
+    display: flex;
+    align-items: center;
+}
+
+.commentusername
+{
+    font-weight: 500;
+    color: var(--Dark-blue);
+    font-size: 15px;
+}
+
+.commentdate
+{
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+}
+
+.commenttext
+{
+    margin-top: .5rem;
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+}
+
+.comment-you
+{
+    background-color: var(--Moderate-blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: .2rem .3rem;
+}
+
+.commentbuttons
+{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: right;
+}
+
+.reply-button
+{
+    color: var(--Moderate-blue);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-button
+{
+    color: var(--Soft-Red);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.edit-button
+{
+    color: var(--Moderate-blue);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.mg-left-75
+{
+    margin-left: 0.75rem;
+}
+
+.comment-form-section
+{
+    background-color: white;
+    width: 100%;
+}
+
+.commentform 
+{
+    display: flex;
+    padding: 1rem;
+}
+
+.commentform-input
+{
+    position: relative;
+    text-align: top;
+    height: 50px;
+}
+
+.commentform-input::placeholder
+{
+    position: absolute;
+    margin: bottom;
+}
+
 .reply-comment
 {
     display: none;
+    margin-top: 1rem;
 }
 
 .reply-comment.reply-active
