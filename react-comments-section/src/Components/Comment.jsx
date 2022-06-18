@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react'
 import elonImage from '../images/avatars/elonAvatar.png'
 
@@ -8,6 +9,27 @@ export const Comment = ({commentage ,commentimage , commenttext, commentdate, ow
   const[comofcom, setcoc] = useState([]);
   const[editView, setEditView] = useState(false);
   const[editInput, setEditInput] = useState(commenttext);
+  const[seconds, setSeconds] = useState(0);
+  const[minutes, setMinutes] = useState(0);
+  const[hours, setHours] = useState(0);
+  var timer;
+
+  useEffect(()=>{
+
+    timer = setInterval(()=>{
+      setSeconds(seconds + 1);
+      if(seconds > 59) {
+        setMinutes(minutes + 1);
+        setSeconds(0);
+      }
+      if(minutes > 59) {
+        setHours(hours + 1);
+        setMinutes(0);
+      }
+    }, 1000)  
+
+    return()=>clearInterval(timer);
+  });
 
   const changeReply = () =>{
     if(replyActive){setReplyActive(false)}
@@ -90,7 +112,7 @@ export const Comment = ({commentage ,commentimage , commenttext, commentdate, ow
             <div className="commentimage"><img src={commentimage} alt="" /></div>
             <div className="commentusername mg-left-75">{commentusername}</div>
             {ownComment && <div className="comment-you mg-left-75">you</div>}
-            <div className="commentdate mg-left-75">{commentdate}</div>
+            <div className="commentdate mg-left-75">{!commentdate && <div>{hours>0? hours + " hours ago": minutes>0? minutes + " minutes ago": seconds + " seconds ago"}</div> || commentdate}</div>
           </div>
           <div className="commenttext">{editInput}</div>
           <div className="commentbuttons">
