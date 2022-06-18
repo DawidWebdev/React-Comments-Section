@@ -40,8 +40,9 @@ const App = () => {
     <main>
       <section>
         <ul>
-          <Comment commentimage={GatesImage} commenttext="Wow! This app is better than Twitter!" commentdate="1 week ago" elonImage={ElonImage} ownComment={false} commentusername="Bill Gates"/>
-          <Comment commentimage={ZuckerbergImage} commenttext="In my opinion, this application is a new facebook, change my mind!!!" commentdate="2 days ago" elonImage={ElonImage} ownComment={false} commentusername="Mark Zuckerberg"/>
+          <Comment commentimage={GatesImage} commenttext="Wow! this website is better than twitter! You can see that the programmer who made it is a good front-end developer, it looks great! Dawid Poniewierski == Mark Zuckerberg." commentdate="1 week ago" elonImage={ElonImage} ownComment={false} commentusername="Bill Gates"/>
+          <Comment commentimage={ZuckerbergImage} commenttext="In my opinion, this website is a new facebook, change my mind!!! Can I buy it for the META applications?" commentdate="5 days ago" elonImage={ElonImage} ownComment={false} commentusername="Mark Zuckerberg"/>
+          <Comment commentimage={IwinskiImage} commenttext="Buy Cyberpunk 2077! (nice website)" commentdate="2 days ago" elonImage={ElonImage} ownComment={false} commentusername="Marcin Iwiński"/>
           {comments.map((comment) =>{
             return(
               <Comment commentage={comment} commenttext={comment.text} key={comment.id} commentimage={ElonImage} elonImage={ElonImage} ownComment={comment.ownComment} DeleteComment={DeleteComment} commentusername={comment.username}/>

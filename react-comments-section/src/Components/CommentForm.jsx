@@ -18,7 +18,7 @@ export const CommentForm = ({ElonImage, AddComment}) => {
         <div className="comment-form-section">
             <div className="commentform">
                 <img src={ElonImage} alt="" className="commentform-avatar" />
-                <input type="text" onChange={formChange} value={input} className="commentform-input" placeholder='Add a comment...'/>  
+                <textarea onChange={formChange} value={input} className="commentform-input" placeholder='Add a comment...'></textarea>   
                 <button className='commentform-button' onClick={(e)=>{
                     e.preventDefault();
                     formSubmit();
