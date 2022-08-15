@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/React-Comments-Section/static/css/main.737ba28c.css",
+    "main.js": "/React-Comments-Section/static/js/main.51ad228e.js",
+    "static/media/elonAvatar.png": "/React-Comments-Section/static/media/elonAvatar.6f7af86aae723ebb65b6.png",
+    "static/media/gatesAvatar.png": "/React-Comments-Section/static/media/gatesAvatar.c30baf9587b76720d4c5.png",
+    "static/media/iwinskiAvatar.png": "/React-Comments-Section/static/media/iwinskiAvatar.b38982d3f212ef1e526c.png",
+    "static/media/zuckerbergAvatar.png": "/React-Comments-Section/static/media/zuckerbergAvatar.d6b81cfcbbf146f83fb3.png",
+    "index.html": "/React-Comments-Section/index.html",
+    "main.737ba28c.css.map": "/React-Comments-Section/static/css/main.737ba28c.css.map",
+    "main.51ad228e.js.map": "/React-Comments-Section/static/js/main.51ad228e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.737ba28c.css",
+    "static/js/main.51ad228e.js"
+  ]
+}
